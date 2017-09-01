@@ -1,0 +1,8 @@
+  <h3>API Results</h3>
+  {{vm.result}}
+  
+  <p>The weather in <strong>{{vm.result.data.name}}</strong> is <strong>{{vm.result.data.weather[0].main}}</strong> with a temperature of <strong>{{vm.convert(vm.result.data.main.temp)}} &deg;F</strong>.</p>
+  
+  <!-- Using ng-model on this input binds it to the city property of our controller (vm) -->
+  <!-- Any changes made on this input, changes the variable -->
+  <div><input ng-model="vm.city" ng-change="vm.changeCity()" type="text" name="city" /></div>

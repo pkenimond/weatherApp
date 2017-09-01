@@ -78,6 +78,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   });
+  
+    // Default entry point for app
+    .state('main', {
+      url: "/",
+      templateUrl: "src/app/main/main.view.html",
+      controller: 'MainController',
+      controllerAs: 'vm'
+    })
+    
+    // Entry point for when state is /city.
+    // For example http://www.foo.com/city
+    .state('city', {
+      url: "/city",
+      templateUrl: "src/app/city/city.view.html",
+      controller: 'CityController',
+      controllerAs: 'vm'
+    });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
