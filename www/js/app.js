@@ -5,7 +5,8 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ui.router', 'main', 'city'])
+
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -79,7 +80,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
   
-    // Default entry point for app
     .state('main', {
       url: "/",
       templateUrl: "/templates/main.view.html",
@@ -87,8 +87,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       controllerAs: 'vm'
     })
     
-    // Entry point for when state is /city.
-    // For example http://www.foo.com/city
     .state('city', {
       url: "/city",
       templateUrl: "/templates/city.view.html",
