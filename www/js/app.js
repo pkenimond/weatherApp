@@ -82,7 +82,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     // Default entry point for app
     .state('main', {
       url: "/",
-      templateUrl: "src/app/main/main.view.html",
+      templateUrl: "templates/main.view.html",
       controller: 'MainController',
       controllerAs: 'vm'
     })
@@ -91,7 +91,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     // For example http://www.foo.com/city
     .state('city', {
       url: "/city",
-      templateUrl: "src/app/city/city.view.html",
+      templateUrl: "templates/city.view.html",
       controller: 'CityController',
       controllerAs: 'vm'
     });
