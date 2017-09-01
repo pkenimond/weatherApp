@@ -77,12 +77,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'AccountCtrl'
       }
     }
-  });
+  })
   
     // Default entry point for app
     .state('main', {
       url: "/",
-      templateUrl: "templates/main.view.html",
+      templateUrl: "/templates/main.view.html",
       controller: 'MainController',
       controllerAs: 'vm'
     })
@@ -91,7 +91,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     // For example http://www.foo.com/city
     .state('city', {
       url: "/city",
-      templateUrl: "templates/city.view.html",
+      templateUrl: "/templates/city.view.html",
       controller: 'CityController',
       controllerAs: 'vm'
     });
