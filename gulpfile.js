@@ -1,3 +1,4 @@
+// Test merge comment test
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var cleanCss = require('gulp-clean-css');
