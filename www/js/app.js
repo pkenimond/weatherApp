@@ -6,7 +6,7 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ui.router', 'main', 'city'])
-	
+
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -18,10 +18,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
     }
     if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
-      StatusBar.styleDefault();
-    }
-  });
+        // org.apache.cordova.statusbar required
+        StatusBar.hide();
+        console.log('here');
+      }
+    });
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -34,19 +35,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
   
   
-    .state('main', {
-      url: "/",
-      templateUrl: "/templates/main.view.html",
-      controller: 'MainController',
-      controllerAs: 'vm'
-    })
-    
-    .state('city', {
-      url: "/city",
-      templateUrl: "/templates/city.view.html",
-      controller: 'CityController',
-      controllerAs: 'vm'
-    });
+  .state('main', {
+    url: "/",
+    templateUrl: "/templates/main.view.html",
+    controller: 'MainController',
+    controllerAs: 'vm'
+  })
+
+  .state('city', {
+    url: "/city",
+    templateUrl: "/templates/city.view.html",
+    controller: 'CityController',
+    controllerAs: 'vm'
+  });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/');
